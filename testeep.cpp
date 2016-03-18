@@ -6,8 +6,7 @@
  */
 //initializing the overflow counter address to 0 and
 //the counter for overflow counter address as 1 and
-//appliance status address as 3
-// if the number of overflows exceeds the maximum
+//appliance status address as 3 if the number of overflows exceeds the maximum
 #include"testeep.h"
 #include <EEPROM.h>
 
@@ -51,7 +50,7 @@ bool EEPROMManager::writeAppStatus()
 }
 byte EEPROMManager::readAppStatus()
 {
-    val[0]= EEPROM.read(applianceaddr);      // find the location of the appliance status byte and return the value
+    val[0]= EEPROM.read(applianceaddr);      // finds the location of the appliance status byte and returns the value
     val[1]= EEPROM.read(applianceaddr++);
     delay(1000);
 }

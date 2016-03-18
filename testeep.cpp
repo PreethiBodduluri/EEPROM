@@ -28,9 +28,9 @@ bool EEPROMManager::writeAppStatus()
 	  			applianceaddr=applianceaddr+5; // increase the appliance address value to the next free memory
 	  			number_of_overflows_counter=number_of_overflows_counter+1;
 	  			counterValAddr=number_of_overflows_counter+5;
-	  			Serial.println(applianceaddr);
-	  			Serial.print("\t");
-	  			Serial.println(number_of_overflows_counter);
+	  		//	Serial.println(applianceaddr);
+	  		//	Serial.print("\t");
+	  		//	Serial.println(number_of_overflows_counter);
 	  			counter=0;
 	  			EEPROM.write(counterValAddr,0);
 	  			delay(1000);
@@ -43,7 +43,7 @@ bool EEPROMManager::writeAppStatus()
 		EEPROM.write(applianceaddr,appStatus[0]); // appliance status is written in appropriate place
 	  	EEPROM.write(applianceaddr+1,appStatus[1]);
 	    counter++;
-	    Serial.println(counter);
+	  //  Serial.println(counter);
 	  	delay(1000);
 	 }
 

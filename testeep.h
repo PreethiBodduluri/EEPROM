@@ -33,8 +33,7 @@ public:
 	 * @params: appStatus is the status byte which signifies the 4 appliance's status.
 	 * @return: returns if the byte is succesfully written or not
 	 */
-	bool writeAppStatus();// you have to read the value at the overflow counters
-	// and write the appliance status at the appropriate place.
+	bool writeAppStatus();
 	/*
 	 * @return: This method reads the value of the overflow counter and based on that
 	 * finds the location of the appliance status byte and returns the value of that

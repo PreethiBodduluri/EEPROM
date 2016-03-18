@@ -51,7 +51,7 @@ bool EEPROMManager::writeAppStatus()
 }
 byte EEPROMManager::readAppStatus()
 {
-	val[0]= EEPROM.read(applianceaddr);      // find the location of the appliance status byte and return the value
+    val[0]= EEPROM.read(applianceaddr);      // find the location of the appliance status byte and return the value
     val[1]= EEPROM.read(applianceaddr++);
     delay(1000);
 }
